@@ -283,23 +283,70 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: nowrap;
     padding: @padding-site;
     padding-top: 80px;
     padding-bottom: 80px;
     min-height: 373px;
 }
 
-.options-item {
+.options-wrp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 25%;
-    display: block;
     margin: 0 30px 0 0;
+}
+
+.options-item {
+    display: block;
     text-align: center;
     text-decoration: none;
+
+    & svg {
+        margin: 0 0 30px 0;
+        fill: #555555;
+    }
+
+    &:hover svg {
+        fill: #c7b299;
+    }
+
+    &:hover .options-item-title {
+        color: #c7b299;
+    }
 }
+
+.options-wrp::after {
+    content: '';
+    width: 70px;
+    height: 3px;
+    background-color: #f1eee9;
+    display: block;
+
+    &:hover::after {
+        background-color: #c7b299;
+    }
+}
+
 
 .options-item-title {
     color: #555555;
-    font-family: "Raleway - Semi Bold";
+    font-family: 'raleway-semibold', 'arial', sans-serif;
     font-size: 22px;
     font-weight: 400;
+    margin: 0 0 20px 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.options-item-text {
+    color: #8c8c8c;
+    font-family: 'montserrat-regular', 'arial', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0 0 30px 0;
 }
