@@ -34,7 +34,7 @@ body {
     position: relative;
 }
 
-.header-overlay {
+.overlay {
     background-color: rgba(17, 17, 17, 0.7);
     position: absolute;
     top: 0;
@@ -289,12 +289,12 @@ body {
     }
 }
 
-.header-slider-paggination {
+.paggination {
     display: flex;
     justify-content: space-between;
 }
 
-.slider-paggination-item {
+.paggination-item {
     width: 11px;
     height: 11px;
     display: block;
@@ -905,12 +905,44 @@ details[open] .mobile-summary::before {
 
 .posts-item {
     width: 370px;
-    margin: 0 30px 0 0;
+    margin: 0 30px 40px 0;
     min-height: 395px;
     border: 1px solid #f8f8f8;
+    position: relative;
 
     &:nth-child(5) {
         margin-right: 0;
+    }
+
+    &:hover {
+        background-color: #362f2d;
+        border: 1px solid #362f2d;
+    }
+
+    &:hover .posts-item-image {
+        filter: brightness(50%);
+    }
+    
+    &:hover .posts-item-title {
+        color: #c7b299;
+    }
+    
+    &:hover .posts-item-text {
+        color: #ffffff;
+    }
+    
+    &:hover .posts-calendar-date {
+        background-color: #c7b299;
+    }
+    
+    &:hover .posts-calendar-month {
+        background-color: #a48d72;
+    }
+    
+    & .paggination {
+        position: absolute;
+        top: 187px;
+        left: 134px;
     }
 }
 
@@ -943,14 +975,117 @@ details[open] .mobile-summary::before {
     font-weight: 300;
     line-height: 20px;
     text-decoration: none;
+    margin: 0 9px 0 0;
+
+    & svg {
+        fill: #c7b299;
+    }
+
+    &:hover {
+        color: #736357;
+    }
+
+    &:active {
+        color: #c7b299;
+    }
+
+    &:hover svg {
+        fill: #736357;
+    }
+
+    &:active svg {
+        fill: #c7b299;
+    }
 }
 
 .posts-buttons {
     width: 100%;
     text-align: center;
+    padding: 0;
 }
 
 .posts-buttons-arrow {
     background-color: transparent;
     border: none;
+    padding: 0;
+    margin: 0 8px 0 0;
+    width: 24px;
+    height: 24px;
+    outline: none;
+
+    & svg {
+        fill: #d1d1d1;
+    }
+
+    &:hover svg {
+        fill: #c7b299;
+    }
+
+    &:active svg {
+        fill: #736357;
+    }
+}
+
+.posts-item-calendar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+}
+
+.posts-calendar-date {
+    min-height: 35px;
+    border-radius: 3px 3px 0 0;
+    background-color: #363636;
+    color: #ffffff;
+    font-family: 'montserrat-regular', 'arial', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+}
+
+.posts-calendar-month {
+    min-height: 25px;
+    border-radius: 0 0 3px 3px;
+    background-color: #252525;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+}
+
+.promotion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(../img/footer-bg-photo.jpg);
+    min-height: 489px;
+    align-items: center;
+    position: relative;
+    
+    & .overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+.promotion-item {
+    margin: 0 90px 0 0;
+    z-index: 3;
+    
+    &:hover {
+        filter: brightness(80%);
+    }
+    
+    &:active {
+        filter: brightness(50%);
+    }
 }
