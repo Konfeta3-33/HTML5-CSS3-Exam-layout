@@ -1,0 +1,28 @@
+{
+  "name": "exam-layout",
+  "version": "1.0.0",
+  "description": "Данный репозиторий создан для сдачи экзаменационного макета по курсу HTML5/CSS3 в Geekbrains.",
+  "main": "index.js",
+  "scripts": {
+    "less": "yarn lessc less/style.less css/style.css",
+    "serve": "yarn browser-sync start --server --watch 'css/*.css, index.html'",
+    "watch:css": "yarn nodemon -e less --exec \"yarn less\"",
+    "dev": "yarn concurrently --kill-others \"yarn watch:css\" \"yarn serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Konfeta3-33/HTML5-CSS3-Exam-layout.git"
+  },
+  "author": "Valentina Kunina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Konfeta3-33/HTML5-CSS3-Exam-layout/issues"
+  },
+  "homepage": "https://github.com/Konfeta3-33/HTML5-CSS3-Exam-layout#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.1.0",
+    "less": "^3.10.3",
+    "nodemon": "^2.0.2"
+  }
+}
