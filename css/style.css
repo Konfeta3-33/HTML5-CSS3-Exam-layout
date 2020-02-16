@@ -1407,7 +1407,7 @@ details[open] .mobile-summary::before {
   }
   .mobile-image {
     margin: 0;
-    max-width: 33%;
+    max-width: 30%;
     height: auto;
     position: absolute;
     left: 30px;
@@ -1420,6 +1420,7 @@ details[open] .mobile-summary::before {
     width: 100%;
     font-size: 20px;
     margin: 0 0 20px 0;
+    text-align: center;
   }
   .mobile-text,
   .mobile-summary,
@@ -1554,7 +1555,7 @@ details[open] .mobile-summary::before {
 }
 @media (max-width: 480px) and (max-width: 320px) {
   .mobile-image {
-    max-width: 47%;
+    max-width: 40%;
     left: 20px;
   }
 }
