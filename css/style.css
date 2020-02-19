@@ -1253,7 +1253,7 @@ details[open] .mobile-summary::before {
     left: 0;
     right: 0;
     height: 0;
-    background-color: rgba(17, 17, 17, 0.7);
+    background-color: rgba(17, 17, 17, 0.9);
     transition: 0.5s;
     transition-delay: 0.5s;
     list-style: none;
@@ -1263,7 +1263,7 @@ details[open] .mobile-summary::before {
   }
   .header-nav-menu-item {
     width: 100%;
-    font-size: 15px;
+    font-size: 35px;
     padding-bottom: 5px;
   }
   .header-nav-menu-item:first-child {
@@ -1277,8 +1277,9 @@ details[open] .mobile-summary::before {
     display: none;
   }
   .mobile-menu-checkbox:checked ~ .header-nav-menu {
-    height: 300px;
+    height: 100%;
     padding: 0 0 10px 0;
+    line-height: 2;
   }
   .mobile-menu-checkbox:checked + .mobile-menu-btn .mobile-menu-icon {
     background: transparent;
@@ -1315,11 +1316,11 @@ details[open] .mobile-summary::before {
     margin: 0 0 20px 0;
   }
   .options-item-title {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 0 15px 0;
   }
   .options-item-text {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
     margin: 0 0 20px 0;
   }
@@ -1328,11 +1329,11 @@ details[open] .mobile-summary::before {
     min-height: auto;
   }
   .projects-title {
-    font-size: 20px;
+    font-size: 25px;
     margin: 0 0 15px 0;
   }
   .projects-text {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .projects-item {
@@ -1360,7 +1361,7 @@ details[open] .mobile-summary::before {
     margin: 0 0 10px 0;
   }
   .projects-item-txt {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .video {
@@ -1393,7 +1394,7 @@ details[open] .mobile-summary::before {
   }
   .video-text,
   .video-time {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .video-text {
@@ -1407,7 +1408,7 @@ details[open] .mobile-summary::before {
   }
   .mobile-image {
     margin: 0;
-    max-width: 30%;
+    max-width: 48%;
     height: auto;
     position: absolute;
     left: 30px;
@@ -1418,14 +1419,14 @@ details[open] .mobile-summary::before {
   }
   .mobile-title {
     width: 100%;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0 0 20px 0;
     text-align: center;
   }
   .mobile-text,
   .mobile-summary,
   .mobile-summary-text {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .mobile-text {
@@ -1434,6 +1435,9 @@ details[open] .mobile-summary::before {
   }
   .mobile-details {
     margin: 0 0 0 50%;
+  }
+  .mobile-details .mobile-summary-text {
+    padding-left: 20px;
   }
   .mobile-summary {
     padding-left: 20px;
@@ -1447,11 +1451,11 @@ details[open] .mobile-summary::before {
     width: 100%;
   }
   .posts-title {
-    font-size: 20px;
+    font-size: 25px;
     margin: 0 0 15px 0;
   }
   .posts-text {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
     margin: 0 0 20px 0;
   }
@@ -1469,16 +1473,16 @@ details[open] .mobile-summary::before {
     width: 100%;
   }
   .posts-item-title {
-    font-size: 13px;
+    font-size: 15px;
     margin: 0 0 10px 0;
   }
   .posts-item-text {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
     margin: 0 0 10px 0;
   }
   .posts-item-link {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .posts-item-link svg {
@@ -1495,7 +1499,7 @@ details[open] .mobile-summary::before {
   }
   .posts-calendar-date,
   .posts-calendar-month {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.5;
   }
   .posts-calendar-date {
@@ -1525,7 +1529,7 @@ details[open] .mobile-summary::before {
   .footer-copyright {
     padding: 20px;
     min-height: auto;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.5;
     flex-direction: column;
     align-items: center;
@@ -1554,8 +1558,18 @@ details[open] .mobile-summary::before {
   }
 }
 @media (max-width: 480px) and (max-width: 320px) {
+  .header-nav-menu-item {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) and (max-width: 320px) {
+  .mobile-menu-checkbox:checked ~ .header-nav-menu {
+    line-height: 1.7;
+  }
+}
+@media (max-width: 480px) and (max-width: 320px) {
   .mobile-image {
-    max-width: 40%;
+    max-width: 50%;
     left: 20px;
   }
 }

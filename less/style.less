@@ -1248,7 +1248,7 @@ details[open] .mobile-summary::before {
         padding-top: 0;
     }
 
-    & > :not(:last-child) {
+    &> :not(:last-child) {
         margin: 0 0 10px 0;
     }
 
@@ -1334,8 +1334,8 @@ details[open] .mobile-summary::before {
 @media (max-width: 480px) {
 
     @padding-site: 20px;
-    @font-size-p: 10px;
-    @font-size-title-mobile: 20px;
+    @font-size-p: 13px;
+    @font-size-title-mobile: 25px;
     @line-height-p: 1.5;
 
     .container {
@@ -1409,7 +1409,7 @@ details[open] .mobile-summary::before {
         left: 0;
         right: 0;
         height: 0;
-        background-color: rgba(17, 17, 17, 0.7);
+        background-color: rgba(17, 17, 17, 0.9);
         transition: .5s;
         transition-delay: .5s;
         list-style: none;
@@ -1420,8 +1420,12 @@ details[open] .mobile-summary::before {
 
     .header-nav-menu-item {
         width: 100%;
-        font-size: 15px;
+        font-size: 35px;
         padding-bottom: 5px;
+
+        @media (max-width: 320px) {
+            font-size: 25px;
+        }
 
         &:first-child {
             margin-top: 70px;
@@ -1436,12 +1440,17 @@ details[open] .mobile-summary::before {
     .mobile-menu-checkbox {
         display: none;
 
-        &:checked ~ .header-nav-menu {
-            height: 300px;
+        &:checked~.header-nav-menu {
+            height: 100%;
             padding: 0 0 10px 0;
+            line-height: 2;
+
+            @media (max-width: 320px) {
+                line-height: 1.7;
+            }
         }
 
-        &:checked + .mobile-menu-btn {
+        &:checked+.mobile-menu-btn {
             .mobile-menu-icon {
                 background: transparent;
 
@@ -1487,7 +1496,7 @@ details[open] .mobile-summary::before {
     }
 
     .options-item-title {
-        font-size: 15px;
+        font-size: 18px;
         margin: 0 0 15px 0;
     }
 
@@ -1601,14 +1610,14 @@ details[open] .mobile-summary::before {
 
     .mobile-image {
         margin: 0;
-        max-width: 30%;
+        max-width: 48%;
         height: auto;
         position: absolute;
         left: 30px;
         bottom: 0;
 
         @media (max-width: 320px) {
-            max-width: 40%;
+            max-width: 50%;
             left: 20px;
         }
     }
@@ -1638,6 +1647,10 @@ details[open] .mobile-summary::before {
 
     .mobile-details {
         margin: 0 0 0 50%;
+
+        & .mobile-summary-text {
+            padding-left: 20px;
+        }
     }
 
     .mobile-summary {
@@ -1682,7 +1695,7 @@ details[open] .mobile-summary::before {
     }
 
     .posts-item-title {
-        font-size: 13px;
+        font-size: 15px;
         margin: 0 0 10px 0;
     }
 
@@ -1714,7 +1727,7 @@ details[open] .mobile-summary::before {
 
     .posts-calendar-date,
     .posts-calendar-month {
-        font-size: @font-size-p;
+        font-size: 12px;
         line-height: @line-height-p;
     }
 
@@ -1751,7 +1764,7 @@ details[open] .mobile-summary::before {
     .footer-copyright {
         padding: @padding-site;
         min-height: auto;
-        font-size: @font-size-p;
+        font-size: 11px;
         line-height: @line-height-p;
         flex-direction: column;
         align-items: center;
