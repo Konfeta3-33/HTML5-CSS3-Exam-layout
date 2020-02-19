@@ -1435,6 +1435,11 @@ details[open] .mobile-summary::before {
     .header-nav-menu-link {
         text-decoration: none;
         color: #fff;
+        line-height: 1.9;
+
+        @media (max-width: 320px) {
+            line-height: 1.7;
+        }
     }
 
     .mobile-menu-checkbox {
@@ -1443,7 +1448,7 @@ details[open] .mobile-summary::before {
         &:checked~.header-nav-menu {
             height: 100%;
             padding: 0 0 10px 0;
-            line-height: 2;
+            line-height: 1.9;
 
             @media (max-width: 320px) {
                 line-height: 1.7;

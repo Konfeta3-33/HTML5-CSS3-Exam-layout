@@ -1272,6 +1272,7 @@ details[open] .mobile-summary::before {
   .header-nav-menu-link {
     text-decoration: none;
     color: #fff;
+    line-height: 1.9;
   }
   .mobile-menu-checkbox {
     display: none;
@@ -1279,7 +1280,7 @@ details[open] .mobile-summary::before {
   .mobile-menu-checkbox:checked ~ .header-nav-menu {
     height: 100%;
     padding: 0 0 10px 0;
-    line-height: 2;
+    line-height: 1.9;
   }
   .mobile-menu-checkbox:checked + .mobile-menu-btn .mobile-menu-icon {
     background: transparent;
@@ -1560,6 +1561,11 @@ details[open] .mobile-summary::before {
 @media (max-width: 480px) and (max-width: 320px) {
   .header-nav-menu-item {
     font-size: 25px;
+  }
+}
+@media (max-width: 480px) and (max-width: 320px) {
+  .header-nav-menu-link {
+    line-height: 1.7;
   }
 }
 @media (max-width: 480px) and (max-width: 320px) {
